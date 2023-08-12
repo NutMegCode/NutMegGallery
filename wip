@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art Archive</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .grid-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+  }
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="title">Art</div>
+  <div class="intro">Welcome to our art project archive. Explore a variety of creative works.</div>
+  <div class="grid">
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 1</p>
+    </div>
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 2</p>
+    </div>
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 3</p>
+    </div>
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 4</p>
+    </div>
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 5</p>
+    </div>
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 6</p>
+    </div>
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 7</p>
+    </div>
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 8</p>
+    </div>
+    <div class="grid-item">
+      <p>Placeholder description for Artwork 9</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
