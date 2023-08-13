@@ -41,6 +41,38 @@
     max-width: 100%;
     height: auto;
   }
+  .overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  .overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    display: block; /* To remove any extra space below the image */
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .overlay .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
 </style>
 </head>
 <body>
@@ -49,42 +81,88 @@
   <div class="intro">Welcome to our art project archive. Explore a variety of creative works.</div>
   <div class="grid">
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/BlueWhale_Circle.png" alt="Artwork 1">
+      <a href="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/BlueWhaleCollection.html">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/BlueWhale_Circle.png" alt="Artwork 1">
+      </a>
       <p>Placeholder description for Artwork 1</p>
     </div>
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Bee_Circle.png" alt="Artwork 2">
+      <a href="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/BeeCollection.html">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Bee_Circle.png" alt="Artwork 2">
+      </a>
       <p>Placeholder description for Artwork 2</p>
     </div>
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Orange_Icon.png" alt="Artwork 3">      
+      <a href="#overlay1">
+      	<img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Orange_Icon.png" alt="Artwork 3">
+      </a>      
       <p>Placeholder description for Artwork 3</p>
     </div>
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Red_Icon.png" alt="Artwork 4">      
+      <a href="#overlay2">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Red_Icon.png" alt="Artwork 4">
+      </a>      
       <p>Placeholder description for Artwork 4</p>
     </div>
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Pink_Icon.png" alt="Artwork 5">      
+      <a href="#overlay3">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Pink_Icon.png" alt="Artwork 5">
+      </a>      
       <p>Placeholder description for Artwork 5</p>
     </div>
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Purple_Icon.png" alt="Artwork 6">      
+      <a href="#overlay4">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Purple_Icon.png" alt="Artwork 6">
+      </a>      
       <p>Placeholder description for Artwork 6</p>
     </div>
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Blue_Icon.png" alt="Artwork 7">                  
+      <a href="#overlay5">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Blue_Icon.png" alt="Artwork 7">
+      </a>                  
       <p>Placeholder description for Artwork 7</p>
     </div>
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Green_Icon.png" alt="Artwork 8">            
+      <a href="#overlay6">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Green_Icon.png" alt="Artwork 8">
+      </a>            
       <p>Placeholder description for Artwork 8</p>
     </div>
     <div class="grid-item">
-      <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Yellow_Icon.png" alt="Artwork 9">            
+      <a href="#overlay7">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Yellow_Icon.png" alt="Artwork 9">
+      </a>            
       <p>Placeholder description for Artwork 9</p>
     </div>
   </div>
+</div>
+<div class="overlay" id="overlay1">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Orange_Icon.png" alt="Large Artwork">
+</div>
+<div class="overlay" id="overlay2">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Red_Icon.png" alt="Large Artwork">
+</div>
+<div class="overlay" id="overlay3">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Pink_Icon.png" alt="Large Artwork">
+</div>
+<div class="overlay" id="overlay4">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Purple_Icon.png" alt="Large Artwork">
+</div>
+<div class="overlay" id="overlay5">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Blue_Icon.png" alt="Large Artwork">
+</div>
+<div class="overlay" id="overlay6">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Green_Icon.png" alt="Large Artwork">
+</div>
+<div class="overlay" id="overlay7">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Yellow_Icon.png" alt="Large Artwork">
 </div>
 </body>
 </html>
