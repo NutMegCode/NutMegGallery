@@ -26,20 +26,76 @@
     font-size: 18px;
     margin-bottom: 40px;
   }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+        
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(43, 43, 61);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
   }
-  .grid-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
+
+    .profile-picture {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .profile-picture img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .about-link {
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+  
+  .image-container {
+    display: flex;
+    justify-content: space-between; /* Evenly space the images */
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+    padding: 100px 100px 100px 300px; /* Add padding to the left side */
   }
-  .grid-item img {
-    max-width: 100%;
-    height: auto;
-  }
+    
+    .image-container .image-item {
+      min-width: 200px; /* Set minimum width */
+      min-height: 150px; /* Set minimum height */
+      max-width: 100%; /* Set maximum width */
+      max-height: 500px; /* Set your desired maximum height */
+      width: auto; 
+      height: auto;
+      flex: 1;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      max-height: 300px; /* Set your desired maximum height */
+      width: auto;
+      height: auto;
+      border: 2px solid #333;
+      border-radius: 10px;
+    }
+    
+    .image-description {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px; /* Add margin to prevent overlap */
+    }
   .overlay {
     visibility: hidden;
     position: fixed;
@@ -56,29 +112,31 @@
     transition: visibility 0s, opacity 0.5s;
   }
 
-  .overlay-open {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
+    .overlay-open {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
 
-  .overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    display: block; /* To remove any extra space below the image */
-  }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-  .overlay .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-  }
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      display: block; /* To remove any extra space below the image */
+    }
+
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .overlay .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
 </style>
 
 <script>
@@ -112,63 +170,75 @@
 
 
 <body>
+  <div class="sidebar">
+    <div class="profile-picture">
+        <img src="D:\TheSpiceRack\Pictures\Meg Art\self portrait.jpg" alt="Profile Picture">
+    </div>
+    <nav>
+        <ul>
+            <p><a class="about-link" href="#">About</a></p>
+            <p><a class="about-link" href="#">Collections</a></p>
+            <p><a class="about-link" href="#">Shop</a></p>
+        </ul>
+    </nav>
+</div>
 <div class="container">
   <div class="title">Art</div>
   <div class="intro">Welcome to our art project archive. Explore a variety of creative works.</div>
-  <div class="grid">
-    <div class="grid-item">
-      <a href="https://nutmegcode.github.io/NutMegGallery/BlueWhaleCollection.html">
+  <div class="image-container">
+    <div class="image-item">
+      <a href="https://nutmegcode.github.io/NutMegGallery/IconCollection.html">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/BlueWhale_Circle.png" alt="Artwork 1">
       </a>
-      <p>Placeholder description for Artwork 1</p>
+      <p class="image-description">Icon Collection</p>
     </div>
-    <div class="grid-item">
+    <div class="image-item">
       <a href="https://nutmegcode.github.io/NutMegGallery/BeeCollection.html">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Bee_Circle.png" alt="Artwork 2">
       </a>
-      <p>Placeholder description for Artwork 2</p>
+      <p class="image-description">Bee was made shortly after whale. I was originally going to make a whole series of icons in this style, but abandoned the idea after I realised I would have to add elemets outside of the circle body</p>
     </div>
-    <div class="grid-item">
+    <div class="image-item">
       <a href="#OrangeIconOverlay">
       	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Orange_Icon.png" alt="Artwork 3">
       </a>      
-      <p>Placeholder description for Artwork 3</p>
+      <p class="image-description">Orange Icon. One of my Rainbow Icons</p>
     </div>
-    <div class="grid-item">
+    <div class="image-item">
       <a href="#RedIconOverlay">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Red_Icon.png" alt="Artwork 4">
       </a>      
-      <p>Placeholder description for Artwork 4</p>
+      <p class="image-description">Red Icon. One of my Rainbow Icons</p>
     </div>
-    <div class="grid-item">
+    <div class="image-item">
       <a href="#PinkIconOverlay">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Pink_Icon.png" alt="Artwork 5">
       </a>      
-      <p>Placeholder description for Artwork 5</p>
+      <p class="image-description">Pink Icon. One of my Rainbow Icons</p>
     </div>
-    <div class="grid-item">
+    <div class="image-item">
       <a href="#PurpleIconOverlay">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Purple_Icon.png" alt="Artwork 6">
       </a>      
-      <p>Placeholder description for Artwork 6</p>
+      <p class="image-description">Purple Icon. One of my Rainbow Icons</p>
     </div>
-    <div class="grid-item">
+    <div class="image-item">
       <a href="#BlueIconOverlay">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Blue_Icon.png" alt="Artwork 7">
       </a>                  
-      <p>Placeholder description for Artwork 7</p>
+      <p class="image-description">Blue Icon. One of my Rainbow Icons</p>
     </div>
-    <div class="grid-item">
+    <div class="image-item">
       <a href="#GreenIconOverlay">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Green_Icon.png" alt="Artwork 8">
       </a>            
-      <p>Placeholder description for Artwork 8</p>
+      <p class="image-description">Green Icon. One of my Rainbow Icons</p>
     </div>
-    <div class="grid-item">
+    <div class="image-item">
       <a href="#YellowIconOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Yellow_Icon.png" alt="Artwork 9">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Yellow_Icon.png" alt="Artwork 9" style="min-width: 150px; max-width: 250px; max-height: 180px;">
       </a>            
-      <p>Placeholder description for Artwork 9</p>
+      <p class="image-description">Yellow Icon. One of my Rainbow Icons</p>
     </div>
   </div>
 </div>
