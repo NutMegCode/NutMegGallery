@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portraits</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
 
+  .home {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(43, 43, 61);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .home-link {
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+  .image-container {
+    display: flex;
+    justify-content: space-between; /* Evenly space the images */
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+    padding: 0 100px; /* Add padding to the left side */
+  }
+    
+    .image-container .image-item {
+      min-width: 200px; /* Set minimum width */
+      min-height: 150px; /* Set minimum height */
+      max-width: 100%; /* Set maximum width */
+      max-height: 550px; /* Set your desired maximum height */
+      width: auto; 
+      height: auto;
+      flex: 1;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      max-height: 400px; /* Set your desired maximum height */
+      width: auto;
+      height: auto;
+      border: 2px solid #333;
+      border-radius: 10px;
+    }
+    
+    .image-description {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px; /* Add margin to prevent overlap */
+    }
+    
+  .overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+
+    .overlay-open {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      display: block; /* To remove any extra space below the image */
+    }
+
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .overlay .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+</style>
+
+<script>
+  var scrollPosition = 0;
+  // Add an event listener to the window's scroll event
+  window.addEventListener("scroll", function() {
+    // Update the 'scrollPosition' variable with the current scroll position
+    scrollPosition = window.scrollY;
+  });
+  
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+      // Select the link element
+      var link = document.querySelector('a[href="#target"]');
+      
+      // Add a click event listener to the link
+      link.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent default link behavior
+          
+          // Smoothly scroll to the target position
+          window.scrollTo({
+              top: scrollPosition,
+              behavior: 'smooth'
+          });
+      });
+  });
+</script>
+<div class="container">
+    <div class="home">
+    <a href="https://nutmegcode.github.io/NutMegGallery/index.html">
+      <p class="home-link">Home</p>
+    </a>
+</div>
+  <div class="title">Portraits</div>
+  <div class="intro">Page coming soon.</div>
+
+</body>
+</html>
