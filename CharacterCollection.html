@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Icons</title>
+<title>Characters</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -26,43 +26,7 @@
     font-size: 18px;
     margin-bottom: 40px;
   }
-        
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background-color: rgb(43, 43, 61);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 20px;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-  }
 
-    .profile-picture {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-
-    .profile-picture img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .about-link {
-      text-align: center;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
-  
   .image-container {
     display: flex;
     justify-content: space-between; /* Evenly space the images */
@@ -76,7 +40,7 @@
       min-width: 200px; /* Set minimum width */
       min-height: 150px; /* Set minimum height */
       max-width: 100%; /* Set maximum width */
-      max-height: 500px; /* Set your desired maximum height */
+      max-height: 550px; /* Set your desired maximum height */
       width: auto; 
       height: auto;
       flex: 1;
@@ -84,7 +48,7 @@
     
     .image-container img {
       max-width: 100%;
-      max-height: 300px; /* Set your desired maximum height */
+      max-height: 400px; /* Set your desired maximum height */
       width: auto;
       height: auto;
       border: 2px solid #333;
@@ -96,6 +60,7 @@
       margin-top: 10px;
       margin-bottom: 20px; /* Add margin to prevent overlap */
     }
+    
   .overlay {
     visibility: hidden;
     position: fixed;
@@ -168,101 +133,41 @@
   });
 </script>
 <div class="container">
-  <div class="title">Icons</div>
-  <div class="intro">A collection of the icons I have designed.</div>
+  <div class="title">Characters</div>
+  <div class="intro">A few characters from an abandoned original story.</div>
   <div class="image-container">
     <div class="image-item">
-      <a href="#WhaleOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/BlueWhale_Circle.png" alt="Artwork 1">
+      <a href="#CalebOverlay">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg" alt="Artwork 1">
       </a>
-      <p class="image-description">Blue Whale</p>
+      <p class="image-description">Caleb</p>
     </div>
     <div class="image-item">
-      <a href="#BeeOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Bee_Circle.png" alt="Artwork 2">
+      <a href="#ReyOverlay">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg" alt="Artwork 2">
       </a>
-      <p class="image-description">Bee</p>
+      <p class="image-description">Rey</p>
     </div>
     <div class="image-item">
-      <a href="#OrangeIconOverlay">
-      	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Orange_Icon.png" alt="Artwork 3">
+      <a href="#ReyBotOverlay">
+      	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey_Bot.jpg" alt="Artwork 3">
       </a>      
-      <p class="image-description">Orange Icon. One of my Rainbow Icons</p>
-    </div>
-    <div class="image-item">
-      <a href="#RedIconOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Red_Icon.png" alt="Artwork 4">
-      </a>      
-      <p class="image-description">Red Icon. One of my Rainbow Icons</p>
-    </div>
-    <div class="image-item">
-      <a href="#PinkIconOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Pink_Icon.png" alt="Artwork 5">
-      </a>      
-      <p class="image-description">Pink Icon. One of my Rainbow Icons</p>
-    </div>
-    <div class="image-item">
-      <a href="#PurpleIconOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Purple_Icon.png" alt="Artwork 6">
-      </a>      
-      <p class="image-description">Purple Icon. One of my Rainbow Icons</p>
-    </div>
-    <div class="image-item">
-      <a href="#BlueIconOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Blue_Icon.png" alt="Artwork 7">
-      </a>                  
-      <p class="image-description">Blue Icon. One of my Rainbow Icons</p>
-    </div>
-    <div class="image-item">
-      <a href="#GreenIconOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Green_Icon.png" alt="Artwork 8">
-      </a>            
-      <p class="image-description">Green Icon. One of my Rainbow Icons</p>
-    </div>
-    <div class="image-item">
-      <a href="#YellowIconOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Yellow_Icon.png" alt="Artwork 9">
-      </a>            
-      <p class="image-description">Yellow Icon. One of my Rainbow Icons</p>
+      <p class="image-description">Rey_Bot</p>
     </div>
   </div>
 </div>
 
-<div class="overlay" id="WhaleOverlay">
-  <a href="#BlueWhale_Circle" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/BlueWhale_Circle.png" alt="Large Artwork">
+<div class="overlay" id="CalebOverlay">
+  <a href="#Caleb" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg" alt="Large Artwork">
 </div>
-  <div class="overlay" id="BeeOverlay">
-  <a href="#Bee_Circle" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Bee_Circle.png" alt="Large Artwork">
+  <div class="overlay" id="ReyOverlay">
+  <a href="#Rey" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg" alt="Large Artwork">
 </div>
-<div class="overlay" id="OrangeIconOverlay">
-  <a href="#Orange_Icon" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Orange_Icon.png" alt="Large Artwork">
-</div>
-<div class="overlay" id="RedIconOverlay">
-  <a href="#Red_Icon" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Red_Icon.png" alt="Large Artwork">
-</div>
-<div class="overlay" id="PinkIconOverlay">
-  <a href="#Pink_Icon" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Pink_Icon.png" alt="Large Artwork">
-</div>
-<div class="overlay" id="PurpleIconOverlay">
-  <a href="#Purple_Icon" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Purple_Icon.png" alt="Large Artwork">
-</div>
-<div class="overlay" id="BlueIconOverlay">
-  <a href="#Blue_Icon" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Blue_Icon.png" alt="Large Artwork">
-</div>
-<div class="overlay" id="GreenIconOverlay">
-  <a href="#Green_Icon" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Green_Icon.png" alt="Large Artwork">
-</div>
-<div class="overlay" id="YellowIconOverlay">
-  <a href="#Yellow_Icon" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Yellow_Icon.png" alt="Large Artwork">
+<div class="overlay" id="ReyBotOverlay">
+  <a href="#Rey_Bot" class="close-btn">&times;</a>
+  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey_Bot.jpg" alt="Large Artwork">
 </div>
 </body>
 </html>
