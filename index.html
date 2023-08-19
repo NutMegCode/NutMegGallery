@@ -12,9 +12,9 @@
     background-color: #f0f0f0;
   }
   .container {
-    max-width: 1200px;
+    width: 750px;
     margin: 0 auto;
-    padding: 10px 350px 0px 500px; /* Add padding to the left side */
+    padding: 0 200px; /* Add padding to the left side */
   }
   .title {
     text-align: center;
@@ -65,20 +65,18 @@
   
   .image-container {
     display: flex;
-    justify-content: space-between; /* Evenly space the images */
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-evenly; /* Evenly space the images horizontally */
+    align-items: center; /* center vertically */
+    flex-wrap: wrap; /* wrap to next line when width reached*/
     max-width: 100%; /* Ensure the container doesn't exceed the screen width */
   }
     
     .image-container .image-item {
       min-width: 200px; /* Set minimum width */
       min-height: 150px; /* Set minimum height */
-      max-width: 100%; /* Set maximum width */
-      max-height: 500px; /* Set your desired maximum height */
-      width: auto; 
-      height: auto;
-      flex: 1;
+      max-width: 250px; /* Set maximum width */
+      max-height: 300px; /* Set your desired maximum height */
+      padding: 5px;
     }
     
     .image-container img {
@@ -91,7 +89,6 @@
     }
     
     .image-description {
-      text-align: center;
       margin-top: 10px;
       margin-bottom: 20px; /* Add margin to prevent overlap */
     }
@@ -209,7 +206,7 @@
       </a>      
       <p class="image-description">Portrait Collection</p>
     </div>
-    <div class="image-item">
+    <div class="image-item"  style="max-width: 200px">
       <a href="https://nutmegcode.github.io/NutMegGallery/ClothesCollection.html">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_2.jpg" alt="Artwork 5">
       </a>      
