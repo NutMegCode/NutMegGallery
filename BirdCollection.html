@@ -125,12 +125,74 @@
     }
 </style>
 
+<div class="container">
+    <div class="home">
+    <a href="https://nutmegcode.github.io/NutMegGallery/index.html">
+      <p class="home-link">Home</p>
+    </a>
+</div>
+  <div class="title">Birds</div>
+  <div class="intro">From that time I made everyone a Birdsona for Christmas.</div>
+  <div class="image-container">
+    <div class="image-item"> 
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/bird.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/bird.jpg" alt="Artwork 2">
+      </a>
+      <p class="image-description">Purple Bird Now Flying</p>
+    </div>
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/eagle.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/eagle.jpg" alt="Artwork 2">
+      </a>
+      <p class="image-description">Eagle. A lot of people wanted Eagle</p>
+    </div>
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/magpie.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/magpie.jpg" alt="Artwork 2">
+      </a>
+      <p class="image-description">Magpie</p>
+    </div>
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/owl.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/owl.jpg" alt="Artwork 2">
+      </a>
+      <p class="image-description">Barn Owl for my freind in Canada</p>
+    </div>
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/american magpie.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/american magpie.jpg" alt="Artwork 1">
+      </a>
+      <p class="image-description">American magpie. The first of the Birdsonas</p>
+    </div>
+    <div class="image-item" style="max-width: 250px;">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/bird_1.jpg')">
+      	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/bird_1.jpg" alt="Artwork 3" style="height: 360px;">
+      </a>      
+      <p class="image-description">Purple Bird The Original</p>
+    </div>
+    <div class="image-item" style="max-width: 100px;">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/zombie duck.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/zombie duck.jpg" alt="Artwork 2" style="height: 360px;">
+      </a>
+      <p class="image-description">Zombie duck. Made for halloween</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="overlay" id="Overlay">
+  <a href="#some_place" class="close-btn">&times;</a>
+  <img id="overlayImage" src="" alt="Large Artwork">
+</div>
+
+</body>
+
+
 <script>
   var scrollPosition = 0;
   // Add an event listener to the window's scroll event
   window.addEventListener("scroll", function() {
-    // Update the 'scrollPosition' variable with the current scroll position
-    scrollPosition = window.scrollY;
+    scrollPosition = window.scrollY;     // Update the 'scrollPosition' variable with the current scroll position
   });
   
   </script>
@@ -153,87 +215,17 @@
       });
   });
 </script>
-<div class="container">
-    <div class="home">
-    <a href="https://nutmegcode.github.io/NutMegGallery/index.html">
-      <p class="home-link">Home</p>
-    </a>
-</div>
-  <div class="title">Birds</div>
-  <div class="intro">From that time I made everyone a Birdsona for Christmas.</div>
-  <div class="image-container">
-    <div class="image-item">
-      <a href="#BirdOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/bird.jpg" alt="Artwork 2">
-      </a>
-      <p class="image-description">Purple Bird Now Flying</p>
-    </div>
-    <div class="image-item">
-      <a href="#EagleOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/eagle.jpg" alt="Artwork 2">
-      </a>
-      <p class="image-description">Eagle. A lot of people wanted Eagle</p>
-    </div>
-    <div class="image-item">
-      <a href="#MagpieOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/magpie.jpg" alt="Artwork 2">
-      </a>
-      <p class="image-description">Magpie</p>
-    </div>
-    <div class="image-item">
-      <a href="#OwlOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/owl.jpg" alt="Artwork 2">
-      </a>
-      <p class="image-description">Barn Owl for my freind in Canada</p>
-    </div>
-    <div class="image-item">
-      <a href="#AmericanMagpieOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/american magpie.jpg" alt="Artwork 1">
-      </a>
-      <p class="image-description">American magpie. The first of the Birdsonas</p>
-    </div>
-    <div class="image-item" style="max-width: 250px;">
-      <a href="#Bird1Overlay">
-      	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/bird_1.jpg" alt="Artwork 3" style="height: 360px;">
-      </a>      
-      <p class="image-description">Purple Bird The Original</p>
-    </div>
-    <div class="image-item" style="max-width: 100px;">
-      <a href="#DuckOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/zombie duck.jpg" alt="Artwork 2" style="height: 360px;">
-      </a>
-      <p class="image-description">Zombie duck. Made for halloween</p>
-    </div>
-  </div>
-</div>
 
-<div class="overlay" id="AmericanMagpieOverlay">
-  <a href="#magpie" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/american magpie.jpg" alt="Large Artwork">
-</div>
-  <div class="overlay" id="BirdOverlay">
-  <a href="#bird" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/bird.jpg" alt="Large Artwork">
-</div>
-<div class="overlay" id="Bird1Overlay">
-  <a href="#bird1" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/bird_1.jpg" alt="Large Artwork">
-</div>
-<div class="overlay" id="EagleOverlay">
-  <a href="#eagle" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/eagle.jpg" alt="Large Artwork">
-</div>
-<div class="overlay" id="MagpieOverlay">
-  <a href="#magpie" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/magpie.jpg" alt="Large Artwork">
-</div>
-<div class="overlay" id="OwlOverlay">
-  <a href="#owl" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/owl.jpg" alt="Large Artwork">
-</div>
-<div class="overlay" id="DuckOverlay">
-  <a href="#duck" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/zombie duck.jpg" alt="Large Artwork">
-</div>
-</body>
+<script>
+  // Showing the overlay
+  const overlay = document.getElementById("Overlay");
+  const overlayImage = document.getElementById("overlayImage");
+  
+  // Define a function to show the overlay with the provided image URL
+  function showOverlay(imageUrl) {
+    overlayImage.src = imageUrl;     // Set the source of the overlayImage to the provided image URL
+  }
+</script>
+
+
 </html>
