@@ -125,6 +125,88 @@
     }
 </style>
 
+<div class="container">
+
+  <div class="home">
+    <a href="https://nutmegcode.github.io/NutMegGallery/index.html">
+      <p class="home-link">Home</p>
+    </a>
+</div>
+
+  <div class="title">Clothes</div>
+  <div class="intro">I have been doing these little fine line clothes since I was 14. <br>Here are some that have survived the years!</div>
+  <div class="image-container">
+    <div class="image-item" >
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_1.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_1.jpg" alt="figure_dress_1.jpg">
+      </a>
+      <p class="image-description">Fancy dress. <br>Fine line on paper</p>
+    </div>
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_2.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_2.jpg" alt="figure_dress_2.jpg">
+      </a>
+      <p class="image-description">Purple dress. <br>Fine line on paper</p>
+    </div>
+    
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_3.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_3.jpg" alt="figure_dress_3.jpg">
+      </a>
+      <p class="image-description">Panel dress. <br>Fine line on paper</p>
+    </div>
+    
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_4.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_4.jpg" alt="figure_dress_4.jpg">
+      </a>
+      <p class="image-description">Gathered dress. <br>Fine line on paper</p>
+    </div>
+    
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_1.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_1.jpg" alt="figure_outfit_1.jpg">
+      </a>
+      <p class="image-description">My Real Clothes. <br>Fine line on paper</p>
+    </div>
+    
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_2.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_2.jpg" alt="figure_outfit_2.jpg">
+      </a>
+      <p class="image-description">My Real Clothes Alt. <br>Fine line on paper</p>
+    </div>
+    
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_3.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_3.jpg" alt="figure_outfit_3.jpg">
+      </a>
+      <p class="image-description">Outfit. <br>Fine line on paper</p>
+    </div>
+    
+    <div class="image-item" >
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_suit_1.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_suit_1.jpg" alt="figure_suit_1.jpg">
+      </a>
+      <p class="image-description">Suit I am told looks like a nappy. <br>Fine line on paper</p>
+    </div>
+
+    <div class="image-item"  style="max-width: 200px" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/a Suit.jpg')">
+      <a href="#Overlay">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/a Suit.jpg" alt="A Suit" style="height: 325px;">
+      </a>
+      <p class="image-description">Digital art on Procreate. <br>A Suit</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="Overlay">
+  <a href="#some_place" class="close-btn">&times;</a>
+  <img id="overlayImage" src="" alt="Large Artwork">
+</div>
+
+</body>
+
 <script>
   var scrollPosition = 0;
   // Add an event listener to the window's scroll event
@@ -133,7 +215,7 @@
     scrollPosition = window.scrollY;
   });
   
-  </script>
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -153,125 +235,14 @@
       });
   });
 </script>
-<div class="container">
 
-  <div class="home">
-    <a href="https://nutmegcode.github.io/NutMegGallery/index.html">
-      <p class="home-link">Home</p>
-    </a>
-</div>
+<script>
+const overlay = document.getElementById("Overlay");
+const overlayImage = document.getElementById("overlayImage");
 
-  <div class="title">Clothes</div>
-  <div class="intro">I have been doing these little fine line clothes since 2008. <br>Here are some that have survived the years!</div>
-  <div class="image-container">
-    <div class="image-item">
-      <a href="#figureDress1Overlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_1.jpg" alt="figure_dress_1.jpg">
-      </a>
-      <p class="image-description">Fancy dress. <br>Fine line on paper</p>
-    </div>
-    <div class="image-item">
-      <a href="#figureDress2Overlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_2.jpg" alt="figure_dress_2.jpg">
-      </a>
-      <p class="image-description">Purple dress. <br>Fine line on paper</p>
-    </div>
-    
-    <div class="image-item">
-      <a href="#figureDress3Overlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_3.jpg" alt="figure_dress_3.jpg">
-      </a>
-      <p class="image-description">Panel dress. <br>Fine line on paper</p>
-    </div>
-    
-    <div class="image-item">
-      <a href="#figureDress4Overlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_4.jpg" alt="figure_dress_4.jpg">
-      </a>
-      <p class="image-description">Gathered dress. <br>Fine line on paper</p>
-    </div>
-    
-    <div class="image-item">
-      <a href="#figureOutfit1Overlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_1.jpg" alt="figure_outfit_1.jpg">
-      </a>
-      <p class="image-description">My Real Clothes. <br>Fine line on paper</p>
-    </div>
-    
-    <div class="image-item">
-      <a href="#figureOutfit2Overlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_2.jpg" alt="figure_outfit_2.jpg">
-      </a>
-      <p class="image-description">My Real Clothes Alt. <br>Fine line on paper</p>
-    </div>
-    
-    <div class="image-item">
-      <a href="#figureOutfit3Overlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_3.jpg" alt="figure_outfit_3.jpg">
-      </a>
-      <p class="image-description">Outfit. <br>Fine line on paper</p>
-    </div>
-    
-    <div class="image-item" >
-      <a href="#figureSuit1Overlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_suit_1.jpg" alt="figure_suit_1.jpg">
-      </a>
-      <p class="image-description">Suit I am told looks like a nappy. <br>Fine line on paper</p>
-    </div>
+function showOverlay(imageUrl) {
+  overlayImage.src = imageUrl;
+};
+</script>
 
-    <div class="image-item"  style="max-width: 200px">
-      <a href="#SuitOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/a Suit.jpg" alt="A Suit" style="height: 325px;">
-      </a>
-      <p class="image-description">Digital art on Procreate. <br>A Suit</p>
-    </div>
-  </div>
-</div>
-
-<div class="overlay" id="SuitOverlay">
-  <a href="#a Suit" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/a Suit.jpg" alt="Large Artwork">
-</div>
-
-  <div class="overlay" id="figureDress1Overlay">
-  <a href="#figure_dress_1" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_1.jpg" alt="Large Artwork">
-</div>
-
-<div class="overlay" id="figureDress2Overlay">
-  <a href="#figure_dress_2" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_2.jpg" alt="Large Artwork">
-</div>
-
-<div class="overlay" id="figureDress3Overlay">
-  <a href="#figure_dress_3" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_3.jpg" alt="Large Artwork">
-</div>
-
-<div class="overlay" id="figureDress4Overlay">
-  <a href="#figure_dress_4" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_dress_4.jpg" alt="Large Artwork">
-</div>
-
-<div class="overlay" id="figureOutfit1Overlay">
-  <a href="#figure_outfit_1" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_1.jpg" alt="Large Artwork">
-</div>
-
-<div class="overlay" id="figureOutfit2Overlay">
-  <a href="#figure_outfit_2" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_2.jpg" alt="Large Artwork">
-</div>
-
-<div class="overlay" id="figureOutfit3Overlay">
-  <a href="#figure_outfit_3" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_3.jpg" alt="Large Artwork">
-</div>
-
-<div class="overlay" id="figureSuit1Overlay">
-  <a href="#figure_suit_1" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_suit_1.jpg" alt="Large Artwork">
-</div>
-</div>
-</body>
 </html>
