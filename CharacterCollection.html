@@ -125,6 +125,44 @@
     }
 </style>
 
+<div class="container">
+    <div class="home">
+    <a href="https://nutmegcode.github.io/NutMegGallery/index.html">
+      <p class="home-link">Home</p>
+    </a>
+</div>
+  <div class="title">Characters</div>
+  <div class="intro">A few characters from an abandoned original story.</div>
+  <div class="image-container">
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg" alt="Artwork 1">
+      </a>
+      <p class="image-description">Caleb</p>
+    </div>
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg')">
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg" alt="Artwork 2">
+      </a>
+      <p class="image-description">Rey</p>
+    </div>
+    <div class="image-item">
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey_Bot.jpg')">
+      	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey_Bot.jpg" alt="Artwork 3">
+      </a>      
+      <p class="image-description">Rey_Bot</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="Overlay">
+  <a href="#some_place" class="close-btn">&times;</a>
+  <img id="overlayImage" src="" alt="Large Artwork">
+</div>
+
+</body>
+
+
 <script>
   var scrollPosition = 0;
   // Add an event listener to the window's scroll event
@@ -153,47 +191,13 @@
       });
   });
 </script>
-<div class="container">
-    <div class="home">
-    <a href="https://nutmegcode.github.io/NutMegGallery/index.html">
-      <p class="home-link">Home</p>
-    </a>
-</div>
-  <div class="title">Characters</div>
-  <div class="intro">A few characters from an abandoned original story.</div>
-  <div class="image-container">
-    <div class="image-item">
-      <a href="#CalebOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg" alt="Artwork 1">
-      </a>
-      <p class="image-description">Caleb</p>
-    </div>
-    <div class="image-item">
-      <a href="#ReyOverlay">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg" alt="Artwork 2">
-      </a>
-      <p class="image-description">Rey</p>
-    </div>
-    <div class="image-item">
-      <a href="#ReyBotOverlay">
-      	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey_Bot.jpg" alt="Artwork 3">
-      </a>      
-      <p class="image-description">Rey_Bot</p>
-    </div>
-  </div>
-</div>
 
-<div class="overlay" id="CalebOverlay">
-  <a href="#Caleb" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg" alt="Large Artwork">
-</div>
-  <div class="overlay" id="ReyOverlay">
-  <a href="#Rey" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg" alt="Large Artwork">
-</div>
-<div class="overlay" id="ReyBotOverlay">
-  <a href="#Rey_Bot" class="close-btn">&times;</a>
-  <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey_Bot.jpg" alt="Large Artwork">
-</div>
-</body>
+<script>
+  const overlay = document.getElementById("Overlay");
+  const overlayImage = document.getElementById("overlayImage");
+  
+  function showOverlay(imageUrl) {
+    overlayImage.src = imageUrl;
+  };
+  </script>
 </html>
