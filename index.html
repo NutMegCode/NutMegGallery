@@ -143,8 +143,8 @@
 }
 
 .container {
-  width: 100%; /* Use full width of the viewport */
-  padding: 0 20px; /* Adjust padding for smaller screens */
+  width: 95%; /* Use full width of the viewport */
+  padding: 10px 0px; /* Adjust padding for smaller screens */
 }
 
 .title {
@@ -164,22 +164,24 @@
 }
 
 .image-container {
-  display: flex;
-  flex-direction: column; /* Stack images vertically on mobile */
-  align-items: center;
-  max-width: 100%;
-}
+    display: flex;
+    justify-content: space-evenly; /* Evenly space the images horizontally */
+    align-items: center; /* center vertically */
+    flex-wrap: wrap; /* wrap to next line when width reached*/
+    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+  }
 
-.image-container .image-item {
-  width: 100%; /* Take full width on mobile */
-  max-width: none;
-  max-height: none;
-  padding: 10px 0; /* Adjust padding for better spacing */
-}
+  .image-container .image-item {
+    min-width: 80px; /* Set minimum width */
+    min-height: 30px; /* Set minimum height */
+    max-width: 120px; /* Set maximum width */
+    max-height: 1800px; /* Set your desired maximum height */
+    padding: 2.5px;
+  }
 
 .image-container img {
-  max-width: 100%;
-  max-height: none;
+  max-width: 100px;
+  max-height: 200px;
   width: auto;
   height: auto;
   border: 2px solid #333;
