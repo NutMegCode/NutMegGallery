@@ -123,6 +123,111 @@
       font-size: 24px;
       text-decoration: none;
     }
+
+  @media (max-width: 768px) {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    
+    .container {
+      width: 95%; /* Use full width of the viewport */
+      padding: 10px 0px; /* Adjust padding for smaller screens */
+    }
+    
+    .title {
+      text-align: center;
+      font-size: 28px; /* Reduce font size for smaller screens */
+      margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+    
+    .intro {
+      text-align: center;
+      font-size: 16px; /* Reduce font size for smaller screens */
+      margin-bottom: 20px; /* Adjust margin for smaller screens */
+    }
+    
+    .sidebar {
+      display: none; /* Hide the sidebar on mobile */
+    }
+    
+    .image-container {
+      display: flex;
+      justify-content: space-between; /* Evenly space the images */
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+      padding: 0 100px; /* Add padding to the left side */
+    }
+    
+    .image-container .image-item {
+      min-width: 100px; /* Set minimum width */
+      min-height: 75px; /* Set minimum height */
+      max-width: 100%; /* Set maximum width */
+      max-height: 225px; /* Set your desired maximum height */
+      width: auto; 
+      height: auto;
+      flex: 1;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      max-height: 200px; /* Set your desired maximum height */
+      width: auto;
+      height: auto;
+      border: 2px solid #333;
+      border-radius: 10px;
+    }
+    
+    .image-description {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .overlay {
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s;
+    }
+    
+    .overlay-open {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+    
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      display: block;
+    }
+    
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .overlay .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+}
 </style>
 
 <div class="container">
