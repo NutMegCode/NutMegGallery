@@ -3,239 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Art Archive</title>
+<title>Art Archive</title>  
 <style>
-  body {
+    /* Styling for the entire webpage */
+  .body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
   }
+
+  /* Container to hold the main content */
   .container {
-    width: 750px;
-    margin: 0 auto;
-    padding: 0 200px; /* Add padding to the left side */
+    width: 900px;
+    margin: 0 auto; /* Center align the container */
+    padding: 0 200px; /* Add padding to the left side     you can pass this a single number to apply to all, or two numbers the first will be top and bottom the second will be left and right, or four numbers: top right bottom left */
   }
+
+
   .title {
     text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
   }
+
+
   .intro {
     text-align: center;
     font-size: 18px;
     margin-bottom: 40px;
   }
         
+  /* Styling for the sidebar navigation */
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background-color: rgb(43, 43, 61);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 20px;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fix the position on the screen */
+    top: 0; /* Position from the top */
+    left: 0; /* Position from the left */
+    width: 150px;
+    height: 100%; 
+    background-color: rgb(43, 43, 61); 
+    display: flex; /* Use flex layout to establish a flexible container*/
+    flex-direction: column; /* Arrange items vertically one ontop of the other not side by side*/
+    align-items: left; /* Center align items horizontally */
+    justify-content: flex-start; /* Align items to the top */
+    padding-top: 20px; /* Add padding at the top */
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
   }
 
     .profile-picture {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-bottom: 20px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%; /* Make it circular */
+      overflow: hidden; /* crops the parts that go outside the circle */
+      margin-bottom: 20px; /*add some space under the picture */
+      margin-left: 20px;
     }
 
+    /* Styling for the profile picture image */
     .profile-picture img {
-      max-width: 100%;
+      max-width: 100%; /* you can use either explicit px or a percentage of the full size*/
       height: auto;
-      display: block;
+      display: block; /* Display as block element */
+    }
+
+    .about-link {
+      text-align: left;
+      font-weight: bold;
+      color: white;
+      text-decoration: none; /* Remove underlines */
+    }
+
+  .topbar {
+    display: none; /* Hide the sidebar on mobile */
+  }
+  
+    /* Styling for the container that holds all the images */
+  .image-container {
+    display: flex; /* Use flex layout */
+    justify-content: space-between; /* Evenly space the images */
+    align-items: center; /* Vertically center the items */
+    flex-wrap: wrap; /* Allow images to wrap in multiple lines */
+    gap: 20px; /* Add spacing between images */
+    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+    padding: 0 100px; /* Add padding to the left side (the left padding is to allow for the sideBar)*/
+  }
+  
+    /* Styling for each item that holds a single image and its description in the container */
+  .image-container .image-item {
+    min-width: 200px; 
+    min-height: 150px; 
+    max-width: 100%; 
+    max-height: 550px; 
+    width: auto; /* Automatically adjust the width to fit the content */
+    height: auto; /* Automatically adjust the height to fit the content */
+    flex: 1; /* Distribute available space equally among items */
+  }
+  
+  /* Styling for the images themselves */
+  .image-container img {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto; /* Automatically adjust the width to fit the content */
+    height: auto; /* Automatically adjust the height to fit the content */
+    border: 2px solid #333;
+    border-radius: 10px; /* give it rounded corners */
+  }
+  
+    /* Styling for image descriptions */
+  .image-description {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Add margin to prevent overlap */
+  }
+
+
+
+    /* this is essentially doing all of the above, but for smaller screens like Phones */
+@media (max-width: 768px) {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 60px 0; /* add padding to the top to allow for the top bar */
+      background-color: #f0f0f0;
+    }
+    
+    .container {
+      width: 95%; /* Use almost full width of the viewport */
+      margin: 0 auto; /* Center align the container */
+      padding: 10px 0px; /* Adjust padding for smaller screens */
+    }
+    
+    .title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px; 
+    }
+    
+    .intro {
+      text-align: center;
+      font-size: 16px; 
+      margin-bottom: 20px; 
+    }
+    
+    .sidebar {
+      display: none; /* Hide the sidebar on mobile */
+    }
+
+    /* Styling for the top bar navigation on mobile */
+    .topbar {
+      position: fixed; /* Fix the position on the screen */
+      top: 0; /* Position from the top */
+      left: 0; /* Position from the left */
+      width: 100%;
+      height: 60px; /* Adjust the height according to your design */
+      background-color: rgb(43, 43, 61);
+      flex-direction: row;
+      display: flex; /* Use flex layout to establish a flexible container */
+      align-items: center; /* Center align items horizontally */
+      justify-content: space-between; /* Space out items evenly */
+      padding: 0 20px; /* Add padding on the sides */
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    }
+
+    
+    .profile-picture {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; /* Make it circular */
+      overflow: hidden; /* crops the parts that go outside the circle */
+      margin-top: 30px;
+    }
+
+    /* Styling for the profile picture image */
+    .profile-picture img {
+      max-width: 100%; /* you can use either explicit px or a percentage of the full size*/
+      height: auto;
+      display: block; /* Display as block element */
     }
 
     .about-link {
       text-align: center;
       font-weight: bold;
       color: white;
-      text-decoration: none;
-    }
-  
-  .image-container {
-    display: flex;
-    justify-content: space-evenly; /* Evenly space the images horizontally */
-    align-items: center; /* center vertically */
-    flex-wrap: wrap; /* wrap to next line when width reached*/
-    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
-  }
-    
-    .image-container .image-item {
-      min-width: 200px; /* Set minimum width */
-      min-height: 150px; /* Set minimum height */
-      max-width: 250px; /* Set maximum width */
-      max-height: 300px; /* Set your desired maximum height */
-      padding: 5px;
-    }
-    
-    .image-container img {
-      max-width: 250px;
-      max-height: 250px; /* Set your desired maximum height */
-      width: auto;
-      height: auto;
-      border: 2px solid #333;
-      border-radius: 10px;
-    }
-    
-    .image-description {
-      margin-top: 10px;
-      margin-bottom: 20px; /* Add margin to prevent overlap */
-    }
-  .overlay {
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
-  }
-
-    .overlay-open {
-      overflow: hidden;
-      position: fixed;
-      width: 100%;
-    }
-
-    .overlay img {
-      max-width: 90%;
-      max-height: 90%;
-      display: block; /* To remove any extra space below the image */
-    }
-
-    .overlay:target {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .overlay .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #fff;
-      font-size: 24px;
-      text-decoration: none;
-    }
-    @media (max-width: 768px) {
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-    
-    .container {
-      width: 95%; /* Use full width of the viewport */
-      padding: 10px 0px; /* Adjust padding for smaller screens */
-    }
-    
-    .title {
-      text-align: center;
-      font-size: 28px; /* Reduce font size for smaller screens */
-      margin-bottom: 10px; /* Adjust margin for smaller screens */
-    }
-    
-    .intro {
-      text-align: center;
-      font-size: 16px; /* Reduce font size for smaller screens */
-      margin-bottom: 20px; /* Adjust margin for smaller screens */
-    }
-    
-    .sidebar {
-      display: none; /* Hide the sidebar on mobile */
+      text-decoration: none; /* Remove underlines */
     }
     
     .image-container {
-      display: flex;
+      display: flex; /* Use flex layout */
       justify-content: space-between; /* Evenly space the images */
-      flex-wrap: wrap;
-      gap: 20px;
+      flex-wrap: wrap; /* Allow images to wrap in multiple lines */
+      gap: 20px; /* Add spacing between images */
       max-width: 100%; /* Ensure the container doesn't exceed the screen width */
       padding: 0px; 
     }
     
+    /* Styling for each item that holds a single image and its description in the container */
     .image-container .image-item {
-      min-width: 100px; /* Set minimum width */
-      min-height: 75px; /* Set minimum height */
-      max-width: 100%; /* Set maximum width */
-      max-height: 100%; /* Set your desired maximum height */
-      width: auto; 
-      height: auto;
-      flex: 1;
+      min-width: 100px; 
+      min-height: 75px; 
+      max-width: 100%; 
+      max-height: 100%; 
+      width: auto;  /* Automatically adjust the width to fit the content */
+      height: auto; /* Automatically adjust the height to fit the content */
+      flex: 1; /* Distribute available space equally among items */
+
+      /* Additional styles for description to center it within the image item and ensure its length never exceeds the image item*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
     }
-    
+
+    /* Styling for the images themselves */
     .image-container img {
       max-width: 100%;
-      max-height: 200px; /* Set your desired maximum height */
-      width: auto;
-      height: auto;
+      max-height: 200px;
+      width: auto; /* Automatically adjust the width to fit the content */
+      height: auto; /* Automatically adjust the height to fit the content */
       border: 2px solid #333;
-      border-radius: 10px;
+      border-radius: 10px; /* give it rounded corners */
     }
     
+      /* Styling for image descriptions */
     .image-description {
+      text-align: center;
       margin-top: 10px;
-      margin-bottom: 20px;
-    }
-    
-    .overlay {
-      visibility: hidden;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-      opacity: 0;
-      transition: visibility 0s, opacity 0.5s;
-    }
-    
-    .overlay-open {
-      overflow: hidden;
-      position: fixed;
+      margin-bottom: 20px; /* Add margin to prevent overlap */
       width: 100%;
     }
-    
-    .overlay img {
-      max-width: 90%;
-      max-height: 90%;
-      display: block;
-    }
-    
-    .overlay:target {
-      visibility: visible;
-      opacity: 1;
-    }
-    
-    .overlay .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #fff;
-      font-size: 24px;
-      text-decoration: none;
-    }
+
 }
   
 </style>
@@ -248,7 +244,7 @@
     scrollPosition = window.scrollY;
   });
   
-  </script>
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -282,48 +278,63 @@
             <p><a class="about-link" href="#">Shop</a></p>
         </ul>
     </nav>
-</div>
-<div class="container">
-  <div class="title">Art</div>
-  <div class="intro">Welcome to our art project archive. Explore a variety of creative works.</div>
-  <div class="image-container">
-    <div class="image-item">
-      <a href="https://nutmegcode.github.io/NutMegGallery/IconCollection.html">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/icons/BlueWhale_Circle.png" alt="Artwork 1">
-      </a>
-      <p class="image-description">Icon Collection</p>
+  </div>
+
+  <div class="topbar">
+    <div class="profile-picture">
+        <img src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Portraits/self portrait.jpg" alt="Profile Picture">
     </div>
-    <div class="image-item">
-      <a href="https://nutmegcode.github.io/NutMegGallery/BirdCollection.html">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/american magpie.jpg" alt="Artwork 2">
-      </a>
-      <p class="image-description">Bird Collection</p>
-    </div>
-    <div class="image-item">
-      <a href="https://nutmegcode.github.io/NutMegGallery/CharacterCollection.html">
-      	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg" alt="Artwork 3">
-      </a>      
-      <p class="image-description">Character Collection</p>
-    </div>
-    <div class="image-item">
-      <a href="https://nutmegcode.github.io/NutMegGallery/PortraitCollection.html">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Portraits/Vic_Color.gif" alt="Artwork 4">
-      </a>      
-      <p class="image-description">Portrait Collection</p>
-    </div>
-    <div class="image-item"  style="max-width: 200px">
-      <a href="https://nutmegcode.github.io/NutMegGallery/ClothesCollection.html">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_2.jpg" alt="Artwork 5">
-      </a>      
-      <p class="image-description">Clothes Collection</p>
-    </div>
-    <div class="image-item">
-      <a href="https://nutmegcode.github.io/NutMegGallery/EmbroideryCollection.html">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Embroidery/Spider_Bag.jpg" alt="Artwork 6">
-      </a>      
-      <p class="image-description">Embroidery Collection</p>
+    <nav>
+        <ul>
+            <a class="about-link" href="#" style="padding-right: 20px;">About</a>
+            <a class="about-link" href="#" style="padding-right: 20px;">Archive</a>
+            <a class="about-link" href="#" style="padding-right: 50px;">Shop</a>
+        </ul>
+    </nav>
+  </div>
+
+
+  <div class="container">
+    <div class="title">Art</div>
+    <div class="intro">Welcome to our art project archive. Explore a variety of creative works.</div>
+    <div class="image-container"> <!--container that holds all the image items -->
+      <div class="image-item" style="max-width: 100px; min-width: 100px; min-height: 100px;"> <!-- an image item that contains an image and a description    to explicitly change just the size of this item write it out like this: <div class="image-item" style="max-width: 100px; min-width: 100px; max-height: 100px; min-height: 100px;"> you will need to do this for the image itself too -->
+        <a href="https://nutmegcode.github.io/NutMegGallery/IconCollection.html" style="max-width: 100px; min-width: 100px; max-height: 100px; min-height: 100px;"> <!-- A hyperlink wrapped around the image -->
+          <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/icons/BlueWhale_Circle.png" alt="Artwork 1"> <!-- the image -->
+        </a>
+        <p class="image-description">Icon Collection</p> <!-- the image -->
+      </div>
+      <div class="image-item">
+        <a href="https://nutmegcode.github.io/NutMegGallery/BirdCollection.html">
+          <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Birds/american magpie.jpg" alt="Artwork 2">
+        </a>
+        <p class="image-description">Bird Collection</p>
+      </div>
+      <div class="image-item">
+        <a href="https://nutmegcode.github.io/NutMegGallery/CharacterCollection.html">
+          <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg" alt="Artwork 3">
+        </a>      
+        <p class="image-description">Character Collection</p>
+      </div>
+      <div class="image-item">
+        <a href="https://nutmegcode.github.io/NutMegGallery/PortraitCollection.html">
+          <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Portraits/Vic_Color.gif" alt="Artwork 4">
+        </a>      
+        <p class="image-description">Portrait Collection</p>
+      </div>
+      <div class="image-item"  style="max-width: 200px">
+        <a href="https://nutmegcode.github.io/NutMegGallery/ClothesCollection.html">
+          <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/clothes/figure_outfit_2.jpg" alt="Artwork 5">
+        </a>      
+        <p class="image-description">Clothes Collection</p>
+      </div>
+      <div class="image-item">
+        <a href="https://nutmegcode.github.io/NutMegGallery/EmbroideryCollection.html">
+          <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/Embroidery/Spider_Bag.jpg" alt="Artwork 6">
+        </a>      
+        <p class="image-description">Embroidery Collection</p>
+      </div>
     </div>
   </div>
-</div>
 </body>
 </html>
