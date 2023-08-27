@@ -5,22 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Characters</title>
 <style>
-  body {
+/* Styling for the entire webpage */
+.body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
   }
+
+  /* Container to hold the main content */
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 750px;
+    margin: 0 auto; /* Center align the container */
+    padding: 0px; /* No padding here as there is no sideBar     you can pass this a single number to apply to all, or two numbers the first will be top and bottom the second will be left and right, or four numbers: top right bottom left */
   }
+
+
   .title {
     text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
   }
+
+
   .intro {
     text-align: center;
     font-size: 18px;
@@ -29,8 +36,8 @@
 
   .home {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 0; /* Position from the top */
+    right: 0; /* Position from the right */
     width: 100px;
     height: 40px;
     background-color: rgb(43, 43, 61);
@@ -45,188 +52,221 @@
       text-align: center;
       font-weight: bold;
       color: white;
-      text-decoration: none;
+      text-decoration: none; /* Remove underlines */
     }
 
-  .image-container {
-    display: flex;
-    justify-content: space-between; /* Evenly space the images */
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
-    padding: 0 100px; /* Add padding to the left side */
-  }
-    
-    .image-container .image-item {
-      min-width: 200px; /* Set minimum width */
-      min-height: 150px; /* Set minimum height */
-      max-width: 100%; /* Set maximum width */
-      max-height: 550px; /* Set your desired maximum height */
-      width: auto; 
-      height: auto;
-      flex: 1;
+    /* Styling for the container that holds all the images */
+    .image-container {
+      display: flex; /* Use flex layout */
+      justify-content: space-between; /* Evenly space the images */
+      align-items: center; /* Vertically center the items */
+      flex-wrap: wrap; /* Allow images to wrap in multiple lines */
+      gap: 20px; /* Add spacing between images */
+      max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+      padding: 0 100px; /* Add padding to the left side (the left padding is to allow for the sideBar)*/
     }
     
+      /* Styling for each item that holds a single image and its description in the container */
+    .image-container .image-item { 
+      max-width: 100%; 
+      max-height: 500px; 
+      width: auto; /* Automatically adjust the width to fit the content */
+      height: auto; /* Automatically adjust the height to fit the content */
+      flex: 1; /* Distribute available space equally among items */
+
+      /* Additional styles for description to center it within the image item and ensure its length never exceeds the image item*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* Styling for the images themselves */
     .image-container img {
-      max-width: 100%;
-      max-height: 400px; /* Set your desired maximum height */
-      width: auto;
-      height: auto;
+      max-width: 240px;
+      max-height: 300px;
+      width: auto; /* Automatically adjust the width to fit the content */
+      height: auto; /* Automatically adjust the height to fit the content */
       border: 2px solid #333;
-      border-radius: 10px;
+      border-radius: 10px; /* give it rounded corners */
     }
     
+
+    /* Styling for image descriptions */
     .image-description {
       text-align: center;
       margin-top: 10px;
       margin-bottom: 20px; /* Add margin to prevent overlap */
     }
-    
-  .overlay {
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
-  }
 
-    .overlay-open {
-      overflow: hidden;
-      position: fixed;
-      width: 100%;
-    }
 
-    .overlay img {
-      max-width: 90%;
-      max-height: 90%;
-      display: block; /* To remove any extra space below the image */
-    }
+/* Styles for overlay element */
+.overlay {
+  visibility: hidden; /* Initially hidden */
+  position: fixed; /* Fixed position on the screen */
+  top: 0; /* Positioned at the top edge of the viewport */
+  left: 0; /* Positioned at the left edge of the viewport */
+  width: 100%; /* Covers the entire viewport width */
+  height: 100%; /* Covers the entire viewport height */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: flex; /* Flex container for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 999; /* Higher stacking order */
+  opacity: 0; /* Initially transparent */
+  transition: visibility 0s, opacity 0.5s; /* Transition effects for visibility and opacity */
+}
 
-    .overlay:target {
-      visibility: visible;
-      opacity: 1;
-    }
+/* Styles for overlay when it's open */
+.overlay-open {
+  overflow: hidden; /* Prevent scrolling when overlay is open */
+  position: fixed; /* Fixed position on the screen */
+  width: 100%; /* Covers the entire viewport width */
+}
 
-    .overlay .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #fff;
-      font-size: 24px;
-      text-decoration: none;
-    }
+/* Styles for images within the overlay */
+.overlay img {
+  max-width: 90%; /* Limit image width */
+  max-height: 90%; /* Limit image height */
+  display: block; /* Remove extra space below the image */
+}
 
-  @media (max-width: 768px) {
+/* Styles for overlay when it's the target of a link (open) */
+.overlay:target {
+  visibility: visible; /* Make overlay visible */
+  opacity: 1; /* Make overlay fully opaque */
+}
+
+/* Styles for close button within the overlay */
+.overlay .close-btn {
+  position: absolute; /* Absolute position within the overlay */
+  top: 10px; /* Positioned 10px from the top edge of the overlay */
+  right: 10px; /* Positioned 10px from the right edge of the overlay */
+  color: #fff; /* Text color */
+  font-size: 50px;
+  text-decoration: none; /* Remove underlines */
+}
+
+  @media (max-width: 750px) {
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 60px 0; /* add padding to the top to allow for the top bar */
       background-color: #f0f0f0;
     }
     
     .container {
-      width: 95%; /* Use full width of the viewport */
+      width: 95%; /* Use almost full width of the viewport */
+      margin: 0 auto; /* Center align the container */
       padding: 10px 0px; /* Adjust padding for smaller screens */
     }
     
     .title {
       text-align: center;
-      font-size: 28px; /* Reduce font size for smaller screens */
-      margin-bottom: 10px; /* Adjust margin for smaller screens */
+      font-size: 28px;
+      margin-bottom: 10px; 
     }
     
     .intro {
       text-align: center;
-      font-size: 16px; /* Reduce font size for smaller screens */
-      margin-bottom: 20px; /* Adjust margin for smaller screens */
+      font-size: 16px; 
+      margin-bottom: 20px; 
     }
     
     .sidebar {
       display: none; /* Hide the sidebar on mobile */
     }
     
+        
     .image-container {
-      display: flex;
+      display: flex; /* Use flex layout */
       justify-content: space-between; /* Evenly space the images */
-      flex-wrap: wrap;
-      gap: 20px;
+      flex-wrap: wrap; /* Allow images to wrap in multiple lines */
+      gap: 20px; /* Add spacing between images */
       max-width: 100%; /* Ensure the container doesn't exceed the screen width */
       padding: 0px; 
     }
     
+    /* Styling for each item that holds a single image and its description in the container */
     .image-container .image-item {
-      min-width: 100px; /* Set minimum width */
-      min-height: 75px; /* Set minimum height */
-      max-width: 100%; /* Set maximum width */
-      max-height: 100%; /* Set your desired maximum height */
-      width: auto; 
-      height: auto;
-      flex: 1;
+      min-width: 100px; 
+      min-height: 75px; 
+      max-width: 100%; 
+      max-height: 100%; 
+      width: auto;  /* Automatically adjust the width to fit the content */
+      height: auto; /* Automatically adjust the height to fit the content */
+      flex: 1; /* Distribute available space equally among items */
+
+      /* Additional styles for description to center it within the image item and ensure its length never exceeds the image item*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
     }
-    
+
+    /* Styling for the images themselves */
     .image-container img {
       max-width: 100%;
-      max-height: 200px; /* Set your desired maximum height */
-      width: auto;
-      height: auto;
+      max-height: 200px;
+      width: auto; /* Automatically adjust the width to fit the content */
+      height: auto; /* Automatically adjust the height to fit the content */
       border: 2px solid #333;
-      border-radius: 10px;
+      border-radius: 10px; /* give it rounded corners */
     }
     
+      /* Styling for image descriptions */
     .image-description {
+      text-align: center;
       margin-top: 10px;
-      margin-bottom: 20px;
-    }
-    
-    .overlay {
-      visibility: hidden;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-      opacity: 0;
-      transition: visibility 0s, opacity 0.5s;
-    }
-    
-    .overlay-open {
-      overflow: hidden;
-      position: fixed;
+      margin-bottom: 20px; /* Add margin to prevent overlap */
       width: 100%;
     }
     
-    .overlay img {
-      max-width: 90%;
-      max-height: 90%;
-      display: block;
-    }
+/* Styles for overlay element */
+.overlay {
+  visibility: hidden; /* Initially hidden */
+  position: fixed; /* Fixed position on the screen */
+  top: 0; /* Positioned at the top edge of the viewport */
+  left: 0; /* Positioned at the left edge of the viewport */
+  width: 100%; /* Covers the entire viewport width */
+  height: 100%; /* Covers the entire viewport height */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: flex; /* Flex container for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 999; /* Higher stacking order */
+  opacity: 0; /* Initially transparent */
+  transition: visibility 0s, opacity 0.5s; /* Transition effects for visibility and opacity */
+}
+
+  /* Styles for overlay when it's open */
+  .overlay-open {
+    overflow: hidden; /* Prevent scrolling when overlay is open */
+    position: fixed; /* Fixed position on the screen */
+    width: 100%; /* Covers the entire viewport width */
+  }
+
+  /* Styles for images within the overlay */
+  .overlay img {
+    max-width: 90%; /* Limit image width */
+    max-height: 90%; /* Limit image height */
+    display: block; /* Remove extra space below the image */
+  }
+
+  /* Styles for overlay when it's the target of a link (open) */
+  .overlay:target {
+    visibility: visible; /* Make overlay visible */
+    opacity: 1; /* Make overlay fully opaque */
+  }
     
-    .overlay:target {
-      visibility: visible;
-      opacity: 1;
-    }
-    
-    .overlay .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #fff;
-      font-size: 24px;
-      text-decoration: none;
-    }
+  /* Styles for close button within the overlay */
+  .overlay .close-btn {
+    position: absolute; /* Absolute position within the overlay */
+    top: 10px; /* Positioned 10px from the top edge of the overlay */
+    right: 10px; /* Positioned 10px from the right edge of the overlay */
+    color: #fff; /* Text color */
+    font-size: 50px;
+    text-decoration: none; /* Remove underlines */
+  }
 }
 </style>
 
@@ -239,24 +279,28 @@
   <div class="title">Characters</div>
   <div class="intro">A few characters from an abandoned original story.</div>
   <div class="image-container">
-    <div class="image-item">
-      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg')">
-        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg" alt="Artwork 1">
+
+    <div class="image-item"> <!-- an image item that contains an image and a description    to explicitly change just the size of this item write it out like this: <div class="image-item" style="max-width: 100px; min-width: 100px; max-height: 100px; min-height: 100px;"> you will need to do this for the image itself too -->
+      <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg')"> <!-- makes the image clickable and opens the overlay, pass it the path of the image it should show -->
+        <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Caleb.jpg" alt="Artwork 1"><!-- the image -->
       </a>
-      <p class="image-description">Caleb</p>
+      <p class="image-description">Caleb</p> <!-- a description under the image, use <br> for new lines in your text, the image container should shift height to house your text -->
     </div>
+
     <div class="image-item">
       <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg')">
         <img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey.jpeg" alt="Artwork 2">
       </a>
       <p class="image-description">Rey</p>
     </div>
+
     <div class="image-item">
       <a href="#Overlay" onclick="showOverlay('https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey_Bot.jpg')">
       	<img id="target" src="https://github.com/NutMegCode/NutMegCode.github.io/raw/main/images/characters/Rey_Bot.jpg" alt="Artwork 3">
       </a>      
       <p class="image-description">Rey_Bot</p>
     </div>
+    
   </div>
 </div>
 
